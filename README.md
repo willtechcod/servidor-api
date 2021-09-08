@@ -19,3 +19,5 @@ DRIVER DA CONEXAO DA BASE DE DADOS
 
 Instalar a dependencia cors que permite acesso a API 
 ### npm install --save cors
+
+### npm install dotenv --save

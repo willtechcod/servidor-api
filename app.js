@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require ('express');
 const cors = require('cors');  
 const app = express ( );
@@ -5,7 +6,7 @@ const app = express ( );
 
 const Home = require('./models/Home');
 const Orcamento = require('./models/Orcamento');
-
+const port = process.env.PORT || 8080;
 app.use(express.json());
 
 //Abaixo está as permições de requizições de acesso ao back-end conforme a documentação do CORS
@@ -113,4 +114,8 @@ app.get("/visu-orcamento/:id", async (req, res) =>{
       console.log("Servidor Rodando na porta 8080: https://willtechcode-api.herokuapp.com/");
   });*/
 
-  app.listen(process.env.PORT || 8080);
+  //app.listen(process.env.PORT || 8080);
+
+  app.listen(port, () =>{
+    console.log("Servidor Rodando na porta 8080: https://localhost:8080");
+  });
