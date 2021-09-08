@@ -6,7 +6,7 @@ const app = express ( );
 
 const Home = require('./models/Home');
 const Orcamento = require('./models/Orcamento');
-const port = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 app.use(express.json());
 
 //Abaixo está as permições de requizições de acesso ao back-end conforme a documentação do CORS
@@ -116,6 +116,6 @@ app.get("/visu-orcamento/:id", async (req, res) =>{
 
   //app.listen(process.env.PORT || 8080);
 
-  app.listen(port, () =>{
+  app.listen(PORT, () =>{
     console.log("Servidor Rodando na porta 8080: https://localhost:8080");
   });

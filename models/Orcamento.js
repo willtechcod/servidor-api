@@ -31,7 +31,7 @@ const Orcamento = db.define('orcamentos', {
 
 });
 
-Orcamento.sync()
+//Orcamento.sync()
 //Orcamento.sync({alter: true})
 
 module.exports = Orcamento;
