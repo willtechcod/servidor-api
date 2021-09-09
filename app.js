@@ -109,10 +109,10 @@ app.get("/visu-orcamento/:id", async (req, res) =>{
     })
 })
 
-  app.listen(PORT, () => {
+  /*app.listen(PORT, () => {
       console.log("Servidor Rodando na porta 8080: http://localhost:8080");
-  });
+  });*/
 
-  //app.listen(process.env.PORT || 8080);
+  app.listen(process.env.PORT || 8080);
 
   
