@@ -1,4 +1,3 @@
-require('dotenv').config()
 const express = require ('express');
 const cors = require('cors');  
 const app = express ( );
@@ -110,10 +109,10 @@ app.get("/visu-orcamento/:id", async (req, res) =>{
     })
 })
 
-  /*app.listen(8080, () => {
-      console.log("Servidor Rodando na porta 8080: https://willtechcode-api.herokuapp.com/");
-  });*/
+  app.listen(PORT, () => {
+      console.log("Servidor Rodando na porta 8080: http://localhost:8080");
+  });
 
-  app.listen(process.env.PORT || 8080);
+  //app.listen(process.env.PORT || 8080);
 
   
