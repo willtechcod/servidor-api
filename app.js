@@ -35,23 +35,23 @@ app.get( '/', async (req, res)=> {
   } );
 
 
-app.post('/cadastrar',async (req, res)=>{
-    await Home.create(req.body)
+app.post('/cad_orcamento',async (req, res)=>{
+    await Orcamento.create(req.body)
     .then(()=>{
       return res.json({
         erro: false,
-        mensagem: "Dados para página home cadastrado com sucesso!"
+        mensagem: "Orçamento enviado com sucesso!"
       });
     }).catch(()=>{
       return res.status(400).json({
         erro: true,
-        mensagem: "Erro: Dados para página home não cadastrado !"
+        mensagem: "Erro: Orçamento não enviado com sucesso!"
       });
     });
 });
 
 //Criando um Orçamento no banco de dados
-app.post('/cad_orcamento',async (req, res)=>{
+app.post('/cadastrar',async (req, res)=>{
 
  /* await sleep(3000);
   function sleep(ms){
@@ -60,7 +60,7 @@ app.post('/cad_orcamento',async (req, res)=>{
     });
   }*/
 
-  await Orcamento.create(req.body)
+  await Home.create(req.body)
   .then(()=>{
     return res.json({
       erro: false,
